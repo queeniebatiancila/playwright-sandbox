@@ -30,3 +30,8 @@ This project includes small demos and exercises that showcase:
 | `npx playwright test tests/example.spec.ts` | Run a specific test file    |
 | `npx playwright codegen <url>`              | Launch Playwright Codegen   |
 | `npx playwright show-report`                | View test report in browser |
+| `git init`                		              | Initialize git repo         |
+| `git add .`                		              | Add all files          	    |
+| `git commit -m "message"`                   | Commit changes              |
+| `git remote add origin <repo-url>`          | Add remote repository       |
+| `git push -u origin main`                   | Push to GitHub              |
