@@ -4,10 +4,10 @@ test.skip('Skip the test', async ({ page }) => {
     // Test will be skipped
 });
 
-test('Not yet ready', async ({ page }) => {
-    test.fail();
-    // Will mark test as failure, will show error if test does not fail
-});
+// test('Not yet ready', async ({ page }) => {
+//     test.fail();
+//     // Will mark test as failure, will show error if test does not fail
+// });
 
 test.fixme('Test to be fixed', async ({ page }) => {
 });
