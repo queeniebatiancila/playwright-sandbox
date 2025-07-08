@@ -16,9 +16,9 @@ test('Slow test', async ({ page }) => {
     test.slow()
 });
 
-test.only('Focus this test', async ({ page }) => {
+//test.only('Focus this test', async ({ page }) => {
     // Run only focused tests in the entire project
-});
+//});
 
 test('Test login page @smoke', async ({ page }) => {
     // Run only focused tests in the entire project
