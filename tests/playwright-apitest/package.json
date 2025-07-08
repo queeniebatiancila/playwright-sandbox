@@ -1,0 +1,22 @@
+{
+  "name": "playwright-demo",
+  "version": "1.0.0",
+  "description": "This is a personal repository for learning and practicing automated tests using [Playwright](https://playwright.dev/)—a powerful end-to-end testing framework for web applications. This serves as my learning ground to build hands-on experience with browser automation, test structuring, and real-world testing scenarios.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/queeniebatiancila/playwright-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/queeniebatiancila/playwright-sandbox/issues"
+  },
+  "homepage": "https://github.com/queeniebatiancila/playwright-sandbox#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10"
+  }
+}
