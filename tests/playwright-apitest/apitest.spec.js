@@ -1,17 +1,31 @@
 import { test, expect } from '@playwright/test';
 
-test('Playwright: Login Demo 1', async ({ page }) => {
-    test.setTimeout(60000);
-    await page.goto('https://demo.applitools.com');
-    await expect(page.locator('text=Login Form')).toBeVisible({ timeout: 6000 })
-
-    await page.getByRole('textbox', { name: 'Enter your username' }).click();
-    await page.getByRole('textbox', { name: 'Enter your username' }).fill('maevemillay');
-    await page.getByRole('textbox', { name: 'Enter your password' }).click();
-    await page.getByRole('textbox', { name: 'Enter your password' }).fill('12345');
-    await page.getByRole('link', { name: 'Sign in' }).click();
-    await page.waitForSelector('text=ACME', { timeout: 3000 })
-    await expect(page.locator('text=ACME')).toHaveClass('logo-label')
-    // await page.pause();
-
+test('GET Request', async ({ request }) => {
+    //send GET request
+    const response = await request.get('https://reqres.in/api/users?page=2')
+    //verify status code
+    expect(response.status()).toBe(200)
+    //response contains text
+    const text = await response.text();
+    expect(text).toContain('Michael')
+    //log console
+    console.log(await response.json());
 });
+
+test('POST Request', async ({ request }) => {
+    //send POST request
+    const response = await request.post('https://reqres.in/api/users', {
+        data: {
+            "name": "john",
+            "job": "developer"
+        }
+    })
+    //verify status code
+    expect(response.status()).toBe(201);
+    //response contains text
+    const text = await response.text();
+    expect(text).toContain('john')
+    //log console
+    console.log(await response.json());
+})
+
